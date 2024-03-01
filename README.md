@@ -1,4 +1,4 @@
-# bitmagnet on Unraid guide
+# [bitmagnet](https://github.com/bitmagnet-io/bitmagnet) on Unraid guide
 
 This guide will explain how to setup a minimal bitmagnet environment on your Unraid OS.  
 The minimal setup consists of 2 containers; PostgreSQL and bitmagnet.  
