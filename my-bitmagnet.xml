@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="1">
+  <Name>bitmagnet</Name>
+  <Repository>ghcr.io/bitmagnet-io/bitmagnet:latest</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/bitmagnet-io/bitmagnet</Project>
+  <Overview>A self-hosted BitTorrent indexer, DHT crawler, content classifier and torrent search engine with web UI, GraphQL API and Servarr stack integration.</Overview>
+  <Category>Downloaders: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:3333]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/bitmagnet-io/bitmagnet/main/bitmagnet.io/assets/images/favicon.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs>worker run --keys=http_server --keys=queue_server --keys=dht_crawler</PostArgs>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="POSTGRES_HOST" Target="POSTGRES_HOST" Default="localhost" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">localhost</Config>
+  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="TMDB_API_KEY" Target="TMDB_API_KEY" Default="" Mode="" Description="Your own TMDB API key, used to fetch metadata for movies and TV shows" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="API and WebUI port" Target="3333" Default="3333" Mode="tcp" Description="API and WebUI port" Type="Port" Display="always" Required="false" Mask="false">3333</Config>
+  <Config Name="POSTGRES_NAME" Target="POSTGRES_NAME" Default="bitmagnet" Mode="" Description="PostgreSQL database for bitmagnet" Type="Variable" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="postgres" Mode="" Description="Username used to authenticate to the PostgreSQL database" Type="Variable" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="POSTGRES_PORT" Target="POSTGRES_PORT" Default="5432" Mode="" Description="The port on which the PostgreSQL database is hosted" Type="Variable" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="DHT_CRAWLER_SAVE_FILES_THRESHOLD" Target="DHT_CRAWLER_SAVE_FILES_THRESHOLD" Default="100" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DHT_CRAWLER_SCALING_FACTOR" Target="DHT_CRAWLER_SCALING_FACTOR" Default="10" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="DHT_CRAWLER_SAVE_PIECES" Target="DHT_CRAWLER_SAVE_PIECES" Default="false" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="BitTorrent Port (UDP)" Target="3334" Default="3334" Mode="udp" Description="UDP port used by the BitTorrent protocol" Type="Port" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="BitTorrent Port (TCP)" Target="3334" Default="3334" Mode="tcp" Description="TCP port used by the BitTorrent protocol" Type="Port" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="info|debug" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">info</Config>
+  <Config Name="LOG_FILE_ROTATOR_ENABLED" Target="LOG_FILE_ROTATOR_ENABLED" Default="true|false" Mode="" Description="Enable logging to rotating files for ingest to Loki" Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>
+  <Config Name="HTTP_SERVER_LOCAL_ADDRESS" Target="HTTP_SERVER_LOCAL_ADDRESS" Default="3333" Mode="" Description="Used for changing the port on which the WebUI is hosted, handy for when using a fixed internal IP." Type="Variable" Display="advanced" Required="true" Mask="false"></Config>
+</Container>
