@@ -34,5 +34,5 @@
   <Config Name="BitTorrent Port (TCP)" Target="3334" Default="3334" Mode="tcp" Description="TCP port used by the BitTorrent protocol" Type="Port" Display="advanced" Required="false" Mask="false"></Config>
   <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="info|debug" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">info</Config>
   <Config Name="LOG_FILE_ROTATOR_ENABLED" Target="LOG_FILE_ROTATOR_ENABLED" Default="true|false" Mode="" Description="Enable logging to rotating files for ingest to Loki" Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>
-  <Config Name="HTTP_SERVER_LOCAL_ADDRESS" Target="HTTP_SERVER_LOCAL_ADDRESS" Default="3333" Mode="" Description="Used for changing the port on which the WebUI is hosted, handy for when using a fixed internal IP." Type="Variable" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="HTTP_SERVER_LOCAL_ADDRESS" Target="HTTP_SERVER_LOCAL_ADDRESS" Default=":3333" Mode="" Description="WITH `:`, example: `:3333`. Used for changing the port on which the WebUI is hosted, handy for when using a fixed internal IP." Type="Variable" Display="advanced" Required="true" Mask="false"></Config>
 </Container>
