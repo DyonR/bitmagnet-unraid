@@ -36,7 +36,7 @@ In order to get bitmagnet up- and running on Unraid, 1 container from the Apps s
 Currently, there is no bitmagnet template for Unraid available. In the future it may be published to the official *Apps*-section in Unraid, but for now it's a bit more manual.
 
 1. In the Unraid WebUI, open *Terminal* and enter the following:  
-   `curl #URl_TO_THE_TEMPLATE# -o /boot/config/plugins/dockerMan/templates-user/my-bitmagnet.xml`
+   `curl https://raw.githubusercontent.com/DyonR/bitmagnet-unraid/main/my-bitmagnet.xml -o /boot/config/plugins/dockerMan/templates-user/my-bitmagnet.xml`
 2. Go to the *Docker* tab and at the bottom select ***ADD CONTAINER***.  
 3. At the *Template* -> select a template -> User Template -> *bitmagnet*. The template will now load in the WebUI.  
 4. Configure the variables to your liking, a few things to know:  
