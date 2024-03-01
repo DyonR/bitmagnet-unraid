@@ -41,6 +41,6 @@ Currently, there is no bitmagnet template for Unraid available. In the future it
 3. At the *Template* -> select a template -> User Template -> *bitmagnet*. The template will now load in the WebUI.  
 4. Configure the variables to your liking, a few things to know:  
    a. *Post Arguments* has 3 'keys' enabled, `--keys=http_server`, `--keys=queue_server` and `--keys=dht_crawler`, this is default. If you don't wish to run the `dht_crawler`, you can remove that key.  
-   b. Under the *Show more settings ...* menu (above the APPLY/DONE/SAVE button), there are advanced settings located to configure bitmagnet more to your liking.
+   b. Under the *Show more settings ...* menu (above the APPLY/DONE/SAVE button), there are advanced settings located to configure bitmagnet more to your liking.  
    c. Follow [this guide of Synology](https://kb.synology.com/en-au/DSM/tutorial/How_to_apply_for_a_personal_API_key_to_get_video_info) to obtain a TMDB API key.
   
