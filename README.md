@@ -4,7 +4,7 @@ This guide will explain how to setup a minimal bitmagnet environment on your Unr
 The minimal setup consists of 2 containers; PostgreSQL and bitmagnet.  
 
 Minimal setup **excludes** the following containers from the original docker-compose.yml:
-
+  
 ```
 gluetun  
 grafana
@@ -13,8 +13,10 @@ prometheus
 loki
 pyroscope
 postgres-exporter
-```
-
+```  
+  
+There is (currently) no guide available for a full setup including any of the other containers.  
+  
 ## [Read the FAQ](https://bitmagnet.io/faq.html)
 
 [UNDERSTAND WHAT bitmagnet IS, READ THE FAQ ON bitmagnet.io!](https://bitmagnet.io/faq.html)  
@@ -49,6 +51,6 @@ Currently, there is no bitmagnet template for Unraid available. In the future it
 4. Configure the variables to your liking, a few things to know:  
    a. *Post Arguments* has 3 'keys' enabled, `--keys=http_server`, `--keys=queue_server` and `--keys=dht_crawler`, this is default. If you don't wish to run the `dht_crawler`, you can remove that key.  
    b. Under the *Show more settings ...* menu (above the APPLY/DONE/SAVE button), there are advanced settings located to configure bitmagnet more to your liking.  
-   c. Follow [this guide of Synology](https://kb.synology.com/en-au/DSM/tutorial/How_to_apply_for_a_personal_API_key_to_get_video_info) to obtain a TMDB API key.
+   c. Follow [this guide of Synology](https://kb.synology.com/en-au/DSM/tutorial/How_to_apply_for_a_personal_API_key_to_get_video_info) to obtain a TMDB API key.  
    d. **APPLY** the settings to start the `bitmagnet` container.  
 5. Your bitmagnet container is now accessible via http://your-unraid-ip:3333/. (Unless you made changes to the network configuration but then you know what you are doing.)
