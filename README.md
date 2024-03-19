@@ -26,7 +26,7 @@ The owner of bitmagnet recommands [Mullvad](https://mullvad.net/), which I also 
 
 ## Docker Containers setup
 
-In order to get bitmagnet up- and running on Unraid, 1 container from the Apps section must be adjusted, and template must be added manually.
+In order to get bitmagnet up- and running on Unraid, one container from the Apps section must be adjusted, and one template must be added manually.
 
 ### PostgreSQL
 
